@@ -99,13 +99,14 @@ class ObjectDetector:
         """Initialize video writer"""
         try:
             Path(self.config.save_path).parent.mkdir(parents=True, exist_ok=True)
-            fourcc = cv2.VideoWriter_fourcc(*'H264')
+            fourcc = cv2.VideoWriter_fourcc(*'mp4v')
             self.video_writer = cv2.VideoWriter(
                 self.config.save_path, 
                 fourcc, 
                 self.config.fps,
                 (camera_res.width, camera_res.height)
             )
+            logger.info(f"Video writer initialized: {self.config.save_path}")
         except Exception as e:
             logger.error(f"Failed to initialize video writer: {e}")
             raise

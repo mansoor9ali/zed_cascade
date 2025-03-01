@@ -111,7 +111,7 @@ def main(
     point_cloud = sl.Mat(camera_res.width, camera_res.height, sl.MAT_TYPE.F32_C4, sl.MEM.CPU)
 
     # Create video writer
-    fourcc = cv2.VideoWriter_fourcc(*'H264')
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     # fps = camera_infos.camera_configuration.fps
     fps = 20
     out = cv2.VideoWriter(save, fourcc, fps, (camera_res.width, camera_res.height))
