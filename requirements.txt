@@ -1,0 +1,7 @@
+# Python 3.8 Dependencies
+pyzed==3.8
+numpy
+cython
+ultralytics>=8.3.81  # Added for YOLO object detection
+opencv-python>=4.11.0  # Added for computer vision tasks
+# Add specific package requirements here as needed
