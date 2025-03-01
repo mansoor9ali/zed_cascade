@@ -1,0 +1,7 @@
+weights: yolov8m.pt
+img_size: 640
+conf_thres: 0.4
+iou_thres: 0.45
+save_path: mydata/experiment/video/output.mp4
+fps: 20
+max_queue_size: 10
