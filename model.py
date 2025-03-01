@@ -102,7 +102,7 @@ def process_detections(
     image: np.ndarray,
     point_cloud: sl.Mat,
     config: Optional[DetectionConfig] = None
-) -> Tuple[np.ndarray, List[Dict]]:
+) -> np.ndarray:
     """Process and annotate detections on the image.
     
     Args:
@@ -113,7 +113,7 @@ def process_detections(
         config (DetectionConfig, optional): Detection configuration.
     
     Returns:
-        Tuple[np.ndarray, List[Dict]]: Annotated image and list of detection info.
+        np.ndarray: Annotated image.
     """
     if config is None:
         config = DetectionConfig()
@@ -168,7 +168,7 @@ def process_detections(
                     'position_3d': {'x': x, 'y': y, 'z': z}
                 })
                 
-        return annotator.im, detections
+        return annotator.im
         
     except Exception as e:
         logger.error(f"Error processing detections: {e}")

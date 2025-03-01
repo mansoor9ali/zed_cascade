@@ -28,7 +28,7 @@ class DetectionConfig:
         self.img_size = 640
         self.conf_thres = 0.4
         self.iou_thres = 0.45
-        self.save_path = 'mydata/experiment/video/output.mp4'
+        self.save_path = 'mydata/experiment/output/output.mp4'
         self.max_queue_size = 10
         self.fps = 20
         

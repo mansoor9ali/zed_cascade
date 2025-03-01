@@ -113,7 +113,7 @@ class ObjectDetector:
                     annotated_image = process_detections(self.model, det, image, point_cloud)
                     
                     with self.lock:
-                        self.annotator = Annotator(annotated_image)
+                        self.annotator = Annotator(annotated_image[0] if isinstance(annotated_image, tuple) else annotated_image)
                         self.detection_ready.set()
                 
                 sleep(0.001)  # Prevent CPU overuse
