@@ -14,7 +14,7 @@ This project implements a real-time object detection system that combines:
 
 ```
 zed_cascade/
-├── detector_new.py     # Main detection pipeline
+├── detector.py     # Main detection pipeline
 ├── camera.py          # ZED camera operations
 ├── model.py           # YOLO model handling
 ├── video_writer.py    # Video output management
@@ -107,7 +107,7 @@ save_path: output/video.mp4
 
 3. Run the detection pipeline:
 ```bash
-python detector_new.py --config config.yaml
+python detector.py --config config.yaml
 ```
 
 ## ⚙️ Configuration Options
